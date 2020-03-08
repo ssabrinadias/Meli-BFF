@@ -4,6 +4,7 @@ module.exports = gql`
 	type Query {
 		catalog(q: String): Catalog
         product(id: String): Product
+        productDescription(id: String): Description
 	}
     type Autor {
         name: String
@@ -46,5 +47,8 @@ module.exports = gql`
 	type Product {
         autor: Autor,
         item: Item
+	}
+	type Description {
+        description: String,
 	}
 `;
