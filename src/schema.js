@@ -13,7 +13,7 @@ module.exports = gql`
     type Price {
         currency: String,
         amount: Float,
-        decimals: Float
+        decimal: Float
     }
     type State {
         name: String,
@@ -29,6 +29,7 @@ module.exports = gql`
         free_shipping: Boolean,
         state: State,
     }
+    # replicated to maintain the data contract
     type Item {
         id: String,
         title: String,
@@ -42,7 +43,8 @@ module.exports = gql`
 	type Catalog {
         autor: Autor,
         categories: [String],
-        items: [Items]
+        items: [Items],
+        error: String
 	}
 	type Product {
         autor: Autor,
