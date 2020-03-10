@@ -2,7 +2,6 @@ const fetch = require("node-fetch");
 
 const getDetail = async id => {
 	const url = `${process.env.BASE_URL}/items/${id}/description`;
-	console.log(url)
 	const headers = {
         "Content-Type": "application/json"
 	};
